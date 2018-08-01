@@ -319,9 +319,8 @@ hr {
 	padding-bottom: 160px;
 }
 
-.section-3 h2 {
+.section-3, .portfolio h2 {
 	text-align: center;
-	padding-bottom: 40px;
 }
 
 .section-3 h3 {
@@ -432,10 +431,85 @@ hr {
 	.col-with-button {		
 	padding-bottom: 150px;
 	}
-}
-
-@media (min-width: 992px){
 	.section-4 h2 {		
 	padding-top: 140px;
 	}
+}
+
+	/*Portfolio*/
+.portfolio, .button-group p {
+	text-align: center;
+}
+
+.portfolio p {
+	padding-top: 30px;
+}
+
+.button-group {
+	padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.button-group button {
+	padding-right: 15px;
+	padding-left: 15px;
+	letter-spacing: 0.2em;
+	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
+	color: #111;
+	border: none;
+	background-color: white;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.button-group button {
+	padding-right: 25px;
+	padding-left: 25px;
+	letter-spacing: 0.4em;
+	}
+	.button-group {
+	padding-top: 80px;
+    padding-bottom: 40px;
+    }
+    .portfolio p {
+	padding-top: 70px;
+	}
+}
+
+.button-group button:hover {
+	opacity: 1;
+}
+
+.button-group button:focus {
+    outline: none;
+}
+
+	/*Isotope*/
+}
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.grid-item {
+	width: 100%;
+	filter: grayscale(1);
+	transition: 0.2s;
+}
+
+@media (min-width: 576px){
+	.grid-item {
+		width: 50%;
+	}
+}
+
+@media (min-width: 992px){
+	.grid-item {
+		width: 33.3333%;
+	}
+}
+
+.grid-item:hover {
+	filter: grayscale(0);
 }
