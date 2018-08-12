@@ -68,6 +68,10 @@ table {
 	clear: both;
 }
 
+.col- {
+	width: 100%;
+}
+
 @media (min-width: 768px) {
 	.col-sm {
 		width: 33.3333%;
@@ -105,8 +109,16 @@ table {
 	padding-top: 60px;
 }
 
+.pad-top-140 {
+	padding-top: 140px;
+}
+
 .pad-bot-60 {
 	padding-bottom: 60px;
+}
+
+.pad-bot-140 {
+	padding-bottom: 140px;
 }
 
 img{
@@ -679,8 +691,11 @@ hr {
     display: inline-block;
     border-radius: 50%;
     background-color: #fff;
-    padding: 4px;
+    padding: 3px;
     opacity: 0.8;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .owl-dots .active span {
@@ -688,31 +703,266 @@ hr {
 	border: 1px solid #fff; 
 }
 
-/*-------------------------------totop button-------------------------------*/
-.totop-button {
-	position: fixed;
-	right: 30px;
-	bottom: 30px;
-	width: 0px;
-	height: 0px;
-	border-left: 15px solid transparent;
-	border-right:  15px solid transparent;
-	border-bottom: 20px solid #c6c6c6;
-	z-index: 1000;
-	transition: 0.3s;
+/*------------------------------- Latest News -------------------------------*/
+.space-between {
+	justify-content: space-between;
+}
+
+.latest-news a {
+	text-decoration: none;
+}
+
+.latest-news a:after {
+	font-family: fontawesome;
+	content: ' \f105';
+}
+
+.grey-btn {
+	background-color: #d6d6d6;
+    padding: 5px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+}
+
+.article {
+	padding-bottom: 40px;
+	filter: grayscale(1);
+}
+
+.article:hover {
+	filter: grayscale(0);
+}
+
+.article h3 {
+	font-size: 15px;
+	letter-spacing: 0.2em;
+	color: #777;
+	padding-top: 20px;
+}
+
+.latest-news .article .heading-text {
+	font-size: 11px;
+	color: #999;
+    padding-bottom: 10px;
+}
+
+.latest-news .article .article-content{
+	margin-bottom: 20px;
+}
+
+/*------------------------------- Subscribe -------------------------------*/
+.item-center {
+	width: 100%;
+    text-align: center;
+}
+
+.row-with-button {
+	width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.row-with-button input {
+	width: 100%;
+	line-height: 26px;
+}
+
+.row-with-button button{
+	margin-top: 20px;
+}
+
+.ashy-bg {
+	background-color: #f1f3f4;
+}
+
+.subscribe .heading-text {
+	font-size: 16px;
+	letter-spacing: 0.3em;
+	font-weight: lighter;
+}
+
+@media (min-width: 768px) {
+	.row-with-button {
+		width: 50%;
+	}
+	.row-with-button input {
+	width: 50%;
+	}
+	.row-with-button button {
+		margin-top: 0px;
+	}
+}
+
+/*------------------------------- Contact -------------------------------*/
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-basis: 66.67%;
+	flex-direction: row;
+}
+
+.col-50-flex {
+	display: inline-flex;
+	width: 50%;
+	flex-direction: row;
+}
+
+.contact .col-8 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 66.67%;
+}
+
+.contact-block {
+	display: flex;
+	align-items: center;
+}
+
+/*.contact-block*/ .icon {
+	font-size: 14px;
+    background-color: #111;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    color: #fff;
+    margin-right: 20px;
+}
+
+.contact-block .fa:before {
+	display: inline-block;
+	transform: rotate(-45deg);
+}
+
+.contact-block .fa-phone:before{
+	padding: 4px 6px;
+}
+
+.contact-block .fa-map-marker:before{
+	padding: 4px 7px;
+}
+
+.contact-block .fa-envelope:before{
+	padding: 5px 5px;
+}
+
+.form .col-50 {
+	padding: 5px;
+}
+
+.form .col-with-inputs .row {
+	margin: -5px;
+}
+
+.form input {
+	width: 100%;
+	line-height: 26px;
+}
+.form input + input {
+	margin-top: 10px;
+}
+
+.form textarea {
+	resize: none;
+	height: 100%;
+	width: 100%;
+}
+
+.contact form {
+	position: relative;
+	padding-top: 50px;
+}
+
+.black-btn {
+	padding: 5px 20px;
+	background-color: #222;
 	border-radius: 3px;
-	opacity: 0;
-	visibility: hidden;
-}
-
-.totop-button:hover {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	line-height: 26px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-decoration: none;
+    color: #fff;
 	cursor: pointer;
-	border-bottom-color: #111;
+	border: none;
 }
 
-.totop-button.show {
-	opacity: 1;
-	visibility: visible;
+.form .form-footer {
+	padding-top: 20px;
+}
+
+.form-footer button {
+	position: absolute;
+	float: left;
+}
+
+.grey-text span:before {
+	font-family: fontawesome;
+	content: '\f05a  ';
+}
+
+.grey-text {
+	opacity: 0.35;
+	font-size: 11px;
+}
+
+.contact 	.grey-text span {
+	position: absolute;
+	float: left;
+}
+
+.contact .grey-text span {
+	padding-top: 50px;
+}
+
+@media (min-width: 768px) {
+	.contact .grey-text span {
+		padding-top: 0px;
+		left: 0;
+	}
+	.form-footer button {
+	right: 0;
+	}
+	.black-btn {
+	letter-spacing: 0.2em;
+	}
+}
+
+dt {
+	font-family: 'Dosis', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 0.3em;
+}
+
+dd {
+	font-weight: lighter;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+form [placeholder] {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	padding-left: 10px;
+}
+
+form textarea[placeholder] {
+	padding-top: 5px;
+}
+
+.contact h2 {
+	padding-bottom: 80px;
 }
 
 /*------------------------------- Map -------------------------------*/
@@ -759,7 +1009,7 @@ hr {
 	visibility: hidden;
 }
 
-.fa-map-marker:before {
+.map-overlay .fa-map-marker:before {
 	display: inline-block;
     transform: rotate(-45deg);
 }
@@ -799,4 +1049,69 @@ hr {
 	left: 0;
 	right: 0;
 	width: 100%;
+}
+
+/*------------------------------- Footer -------------------------------*/
+.logo-block img {
+	width: inherit;
+}
+
+.soc-icons {
+	padding-top: 20px;
+	padding-bottom: 100px; 
+}
+
+.soc-icons .fa:before {
+	display: inline-block;
+	transform: rotate(-45deg);
+	padding: 4px 5px;
+	color: #9f9f9f;
+}
+
+.soc-icons .icon {
+    background-color: #fff;
+    border: 2px;
+	border-color: #222;
+	border-style: solid;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.soc-icons .fa-facebook:before {
+	padding: 4px 7px;
+}
+
+.soc-icons .fa-behance:before {
+	padding: 5px 4px;
+}
+
+.soc-icons .fa:hover {
+	background-color: #555;
+}
+
+/*-------------------------------totop button-------------------------------*/
+.totop-button {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 0px;
+	height: 0px;
+	border-left: 15px solid transparent;
+	border-right:  15px solid transparent;
+	border-bottom: 20px solid #c6c6c6;
+	z-index: 1000;
+	transition: 0.3s;
+	border-radius: 3px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.totop-button:hover {
+	cursor: pointer;
+	border-bottom-color: #111;
+}
+
+.totop-button.show {
+	opacity: 1;
+	visibility: visible;
 }

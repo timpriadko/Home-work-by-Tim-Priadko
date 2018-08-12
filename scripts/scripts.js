@@ -184,12 +184,19 @@ function mapOverlayHidden(){
 		sectionMap = $('.map-section');
 
 		mapTitle.click(function(){
-			mapOverlay.addClass('.hidden');
-		})
+			mapOverlay.addClass('hidden');
+		});
+
+		$(document).click(function(e){
+			if ((mapTitle.has(e.target).length === 0) && (sectionMap.has(e.target).length !== 1)){
+				mapOverlay.removeClass('hidden');
+			};
+		});
 }
 
 $(document).ready(function(){
 	isotope_init();
 	carousel_init();
 	to_top();
+	mapOverlayHidden();
 });
